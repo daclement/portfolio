@@ -1,4 +1,3 @@
-<!-- Create file src/views/Page.vue -->
 
 <template>
   <div class="wrapper">

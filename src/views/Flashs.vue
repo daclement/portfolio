@@ -1,9 +1,8 @@
 <template>
   <div class="wrapper">
-    <b-alert show>Default Alert</b-alert>
-    <prismic-rich-text :field="fields.projects_description" class="description"/>
-        <div v-for="project in fields.projects" :key="project.uid">
-        <a v-bind:href="'/projects/'+ project.uid">{{ $prismic.richTextAsPlain(project.data.project_title) }}
+    <prismic-rich-text :field="fields.flashs_description" class="description"/>
+        <div v-for="flash in fields.flashs" :key="flash.uid">
+        <a v-bind:href="'/flashs/'+ flash.uid">{{ $prismic.richTextAsPlain(flash.data.flash_title) }}
         </a>
     </div> 
   </div>   
@@ -11,47 +10,46 @@
 
 <script>
 export default {
-  name: "Projects",
+  name: "Flashs",
   data() {
     return {
       documentId: "",
       fields: {
-        projects_description: null,
-        projects: []
+        flashs_description: null,
+        flashs: []
       }
     };
   },
   methods: {
     getContent() {
       var that = this;
-      return Promise.all([this.getPage(), this.getDisplayProjects()]);
+      return Promise.all([this.getPage(), this.getDisplayflashs()]);
     },
     getPage() {
       return this.$prismic.client
-        .getByUID("projects", "pageprojects")
+        .getByUID("flashs", "pageflashs")
         .then(document => {
           if (document) {
             this.documentId = document.id;
-            this.fields.projects_description =
-              document.data.projects_description;
+            this.fields.flashs_description = document.data.flashs_description;
           } else {
             this.$router.push({ name: "not-found" });
           }
           return document;
         });
     },
-    getDisplayProjects() {
+    getDisplayflashs() {
       var that = this;
       return this.$prismic
         .getApi(this.$prismic.endpoint)
         .then(api => {
           return api.query(
-            this.$prismic.Predicates.at("document.type", "project")
+            this.$prismic.Predicates.at("document.type", "flash")
           );
         })
         .then(function(response) {
           if (!response) return Promise.reject();
-          that.fields.projects = response.results;
+          that.fields.flashs = response.results;
           console.log(response.results);
           return response;
         });
