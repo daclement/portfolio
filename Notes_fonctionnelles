@@ -1,0 +1,61 @@
+Arborescence : 
+Accueil
+    - Projets
+        - Projet
+    - Flash disponibles
+    - Contact
+
+Fonctionnalités:
+
+Menu : 
+- Gauche : Logo
+- Droite : Projets et Flash disponibles
+
+Accueil :
+Image d'entête (1 image)
+Ping pong (Gauche : Titre, texte - Droite Image)
+Titre,
+Texte,
+Bloc derniers projets (5 thuiles)
+Titre,
+Texte,
+Bloc dernier flash disponibles (5 thuiles)
+Titre,
+Texte,
+Gallerie instagram
+Informations de contact
+
+Page projets (src/views/projects)
+Image d'entête, (1 image, moins hautes que l'accueil avec le titre de la page dedans)
+Titre,
+Texte,
+Bloc projets (Thuiles, à l'over on affiche un titre et CTA voir le projet)
+Titre,
+Texte,
+Bloc flash disponibles (3 thuiles random dans le genre voir aussi)
+CTA vers les flash disponibles
+
+Page projet (src/views/project)
+Image d'entête, (1 image, moins hautes que l'accueil avec le titre de la page dedans)
+Bouton retour à la liste des projets
+Ping pong (Gauche : Titre, texte - Droite Image (Si possible, avoir la possibilité de mettre 2-3 images))
+Titre,
+Texte,
+Bloc flash disponibles (3 thuiles random dans le genre voir aussi)
+CTA vers les flash disponibles
+
+Page Flash disponibles (src/views/flashs)
+Image d'entête, (1 image, moins hautes que l'accueil avec le titre de la page dedans)
+Titre,
+Texte,
+Bloc flash (Thuiles, à l'over on affiche un titre et CTA voir le projet)
+Titre,
+Texte,
+Bloc voir mes projets (3 thuiles random dans le genre voir aussi)
+CTA vers les projets
+
+Page contact
+Titre,
+Texte,
+Formulaire de contact,
+Gallerie instagram
