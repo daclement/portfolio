@@ -8,8 +8,8 @@
 
 <script>
 export default {
-  name: 'FooterPrismic'
-}
+  name: "FooterPrismic"
+};
 </script>
 
 <style scoped>
