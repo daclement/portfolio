@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <router-view/>
-    <vue-instagram/>
+    <MyVueInstagram/>
     <footer-prismic/>
   </div>
 </template>
 
 <script>
-import VueInstagram from "./components/Instagram.vue";
+import MyVueInstagram from "./components/Instagram.vue";
 import FooterPrismic from "./components/FooterPrismic.vue";
 
 export default {
   name: "App",
   components: {
-    VueInstagram,
+    MyVueInstagram,
     FooterPrismic
   }
 };
