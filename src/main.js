@@ -4,9 +4,6 @@ import linkResolver from "./prismic/link-resolver";
 import htmlSerializer from "./prismic/html-serializer";
 import App from "./App.vue";
 import router from "./router";
-import BootstrapVue from "bootstrap-vue";
-
-Vue.use(BootstrapVue);
 
 Vue.config.productionTip = false;
 
