@@ -7,22 +7,43 @@
   "author": "Prismic",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "dev": "npm run serve",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run dev"
   },
   "dependencies": {
     "ajv": "^6.5.5",
     "bootstrap-vue": "^2.0.0-rc.11",
     "jquery": "^3.3.1",
+    "nouislider": "^12.1.0",
     "prismic-dom": "^2.1.0",
     "prismic-vue": "^1.3.0",
+    "sass-loader": "^7.1.0",
+    "v-tooltip": "^2.0.0-rc.33",
     "vue": "^2.5.16",
+    "vue-carousel": "^0.16.1",
+    "vue-clickaway": "^2.2.2",
     "vue-cookie": "^1.1.4",
     "vue-instagram": "^2.0.1",
+    "vue-lazyload": "^1.2.6",
+    "vue-material": "^1.0.0-beta-10.2",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-rc.5",
+    "@vue/cli-plugin-eslint": "3.0.1",
     "@vue/cli-service": "^3.0.0-rc.5",
+    "@vue/eslint-config-prettier": "3.0.1",
+    "eslint": "^5.10.0",
+    "eslint-config-google": "^0.11.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "node-sass": "4.9.3",
+    "sass-loader": "7.1.0",
     "vue-template-compiler": "^2.5.16"
   }
 }

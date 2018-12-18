@@ -1,12 +1,13 @@
 <template>
   <div class="wrapper">
-    <b-alert show>Default Alert</b-alert>
+    <md-button>Button</md-button>
     <prismic-rich-text :field="fields.projects_description" class="description"/>
-        <div v-for="project in fields.projects" :key="project.uid">
-        <a v-bind:href="'/projects/'+ project.uid">{{ $prismic.richTextAsPlain(project.data.project_title) }}
-        </a>
-    </div> 
-  </div>   
+    <div v-for="project in fields.projects" :key="project.uid">
+      <a
+        v-bind:href="'/projects/'+ project.uid"
+      >{{ $prismic.richTextAsPlain(project.data.project_title) }}</a>
+    </div>
+  </div>
 </template>
 
 <script>

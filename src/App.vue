@@ -1,8 +1,15 @@
+/* eslint-disable */
 <template>
   <div id="app">
-    <router-view/>
-    <FeedInstagram/>
-    <footer-prismic/>
+    <div :class="{'nav-open': NavbarStore.showNavbar}">
+      <router-view name="header"/>
+      <div>
+        <router-view/>
+      </div>
+      <router-view name="footer"/>
+      <FeedInstagram/>
+      <footer-prismic/>
+    </div>
   </div>
 </template>
 
